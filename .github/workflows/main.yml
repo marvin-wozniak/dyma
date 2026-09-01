@@ -2,9 +2,14 @@ name: Mon premier workflow
 on: [push]
 
 jobs:
-  deploy: 
-    if: ${{ github.ref == 'refs/heads/hello' }}
+  build: 
     runs-on: ubuntu-latest
     steps:
-    - run: echo Deploy in prod
+    - run: echo build
       
+  deploy: 
+    needs: build
+    runs_on: ubuntu-latest
+    steps:
+      - run: echo deploy in prod
+    
