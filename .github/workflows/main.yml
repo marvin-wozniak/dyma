@@ -7,5 +7,6 @@ jobs:
     steps:
     - run: exit 1
     - run: echo STEP 2
+      if: always()
     - run: echo ${{ contains(github.ref, 'main') }}
       
