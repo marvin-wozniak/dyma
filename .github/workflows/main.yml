@@ -4,13 +4,21 @@ on: push
 jobs:
   build:
     runs-on: ubuntu-latest
+    
     steps:
       - name: install nodejs 
         uses: actions/setup-node@v7
       - name: fetch repository
         uses: actions/checkout@v7
+
+      - name: configure cache
+        uses: actions/cache@v6
+        with:
+          key: ${{ runner.os }}-${{ './vite-project/package-lock.json' }}
+          path:  ./vite-project/.npm
       - name: install dependencies
-        run: npm install
-        working-directory: ./vite-project      
+        run: npm ci --cache .npm
+        working-directory: ./vite-project
+         
       
       
