@@ -4,16 +4,5 @@ on: push
 jobs:
   build:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        os: [ubuntu, windows]
-        vers: [12, 13]
-        exclude:
-          - os: windows
-            vers: 12
-          
-        
     steps:
-      - run: echo ${{ matrix.vers }} ${{ matrix.os }}
-    
-    
+      - run: echo Hello World
