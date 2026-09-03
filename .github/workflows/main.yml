@@ -1,12 +1,16 @@
 name: Mon premier workflow
 on: 
   push:
-    branches:
-      - main 
-      - feature 
+    # branches:
+    #   - main 
+    #   - feature 
+    # branches-ignore:
+    #   - main
+    paths :
+      - '**.png'
 
 jobs:
   build: 
     runs-on: ubuntu-latest
     steps:
-      run: echo JOB DONE
+      - run: echo traiement image
