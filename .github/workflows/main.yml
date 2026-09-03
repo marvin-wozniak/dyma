@@ -10,7 +10,7 @@ jobs:
       - id: step1
         run: | 
           echo $GITHUB_OUTPUT
-          echo FROM_STEP_1=value_step_1 >> $GITHUB_OUTPUT
+          echo "FROM_STEP_1=value_step_1" >> $GITHUB_OUTPUT
       
       
   deploy: 
