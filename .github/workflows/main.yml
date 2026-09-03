@@ -5,13 +5,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - run: |
-        echo ::group::mon groupe
-        echo 1
-        echo 2
-        echo 3
-        echo 4
-        echo ::endgroup::
+    - run: echo 1236
+    - run: echo ::debug::je suis ici
+    - run: echo 456
       
       
       
