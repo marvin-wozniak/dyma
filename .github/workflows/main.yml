@@ -5,7 +5,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - run: |
-          echo ::notice::Un message info
-          echo ::warning::Un warning
-          echo ::error::Une erreur
+      - run: echo fruit=pomme >> $GITHUB_OUTPUT
+        id: step1
+      - run: echo ::error::fruit is ${{ steps.step1.outputs.fruit }} should be poire
+        if: steps.step1.outputs.fruit != 'poire' 
