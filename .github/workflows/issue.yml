@@ -1,0 +1,11 @@
+name: Mon premier workflow
+on:
+  issues:
+    types:
+      - opened
+
+jobs: 
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo run issues created 
