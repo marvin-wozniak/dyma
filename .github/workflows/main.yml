@@ -2,11 +2,10 @@ name: Mon premier workflow
 on: push
 
 jobs:
-    deploy-production:
-      runs-on: ubuntu-latest
-      environment:
-        name: production
-        url: https://test.fr
-      steps:
-        - run: |
-            echo deploy
+  testdocker:
+    runs-on: ubuntu-latest
+    container:
+      image: node:16
+    steps:
+      - run: ls -la 
+      - run: npm -v
