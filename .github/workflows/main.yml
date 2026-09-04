@@ -11,5 +11,5 @@ jobs:
     steps:
       - run: |
           echo very long step
-          sleep 1000
+          sleep 1000 !
           each Done
