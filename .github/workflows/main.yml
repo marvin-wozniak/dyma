@@ -8,11 +8,7 @@ jobs:
       contents: write
 
     steps:
-      - uses: actions/checkout@v6
       - run: |
-          echo 123 > test.txt
-          git config --global user.email "ci@dyma"
-          git config --global user.name "FROM CI"
-          git add test.txt
-          git commit -m "test"
-          git push origin main
+          echo very long step
+          sleep 100
+          each Done
