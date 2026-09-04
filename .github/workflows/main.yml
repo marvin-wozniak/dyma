@@ -4,7 +4,9 @@ on: push
 jobs:
   build:
     runs-on: ubuntu-latest
-    concurrency: waitforme
+    concurrency: 
+      group: waitforme
+      cancel-in-progress: true
     permissions:
       contents: write
 
