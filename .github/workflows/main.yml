@@ -11,4 +11,4 @@ jobs:
           - 6379:6379
     steps:
       - run: sudo apt update && sudo apt install redis-tools -y
-      - run: redis-cli -h localhost - p 6379 ping
+      - run: redis-cli -h localhost -p 6379 ping
